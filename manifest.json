@@ -1,0 +1,27 @@
+{
+  "name": "mathjax-example",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "images/oeis-16.png",
+    "32": "images/oeis-32.png",
+    "48": "images/oeis-48.png",
+    "128": "images/oeis-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["mathjax/*", "mathjax-config.js"],
+      "matches": [  "https://oeis.org/*" ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js", "mathjax-config.js", "mathjax/es5/tex-mml-chtml.js"],
+      "matches": [ "https://oeis.org/*" ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; font-src 'self'; style-src 'self' 'unsafe-inline'"
+  }
+}
