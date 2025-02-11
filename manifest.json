@@ -22,6 +22,6 @@
     }
   ],
   "content_security_policy": {
-    "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; font-src 'self'; style-src 'self' 'unsafe-inline'"
+    "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src-elem 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' https://oeis.org;"
   }
 }
